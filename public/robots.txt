@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /buyer/dashboard
+Disallow: /checkout
+Disallow: /cart
+
+Sitemap: https://jpfurnishing.com/sitemap.xml

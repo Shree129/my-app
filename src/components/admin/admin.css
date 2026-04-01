@@ -1,0 +1,295 @@
+/* src/components/admin/admin.css */
+
+/* --- COLOR PALETTE ---
+   Earthy base: #4B6043 (dark green)
+   Accent gold: #C9A227
+   Light beige: #F4EBD0
+   Off white: #FCFAF2
+*/
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #FCFAF2;
+  margin: 0;
+  padding: 0;
+}
+
+.admin-navbar {
+  background-color: #4B6043;
+  color: #F4EBD0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.admin-navbar button {
+  background-color: #C9A227;
+  border: none;
+  color: #FCFAF2;
+  padding: 0.5rem 1rem;
+  margin-left: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.admin-navbar button:hover {
+  background-color: #a7841a;
+}
+
+.admin-sidebar {
+  background-color: #4B6043;
+  color: #F4EBD0;
+  width: 220px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 2rem 1rem;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.admin-sidebar h3 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.admin-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.admin-sidebar li {
+  margin: 1rem 0;
+}
+
+.admin-sidebar a {
+  text-decoration: none;
+  color: #F4EBD0;
+  font-weight: 500;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.admin-sidebar a:hover {
+  background-color: #C9A227;
+  color: #4B6043;
+}
+
+.admin-content {
+  margin-left: 240px;
+  padding: 2rem;
+}
+
+.analytics-card {
+  background-color: #F4EBD0;
+  border-left: 5px solid #C9A227;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  color: #4B6043;
+}
+/* Tables */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #FCFAF2;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.admin-table th {
+  background-color: #C9A227;
+  color: #4B6043;
+  text-align: left;
+  padding: 12px;
+}
+
+.admin-table td {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  color: #4B6043;
+}
+
+.admin-table tr:hover {
+  background-color: #F4EBD0;
+}
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.edit-btn {
+  background-color: #C9A227;
+  color: #4B6043;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.admin-products {
+  padding: 20px;
+}
+
+.product-form {
+  background: #f5f5f5;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+.product-form input,
+.product-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.product-form button {
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.products-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.products-list th,
+.products-list td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.products-list button {
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.admin-users, .admin-orders, .admin-products {
+  padding: 20px;
+  background: #f9f9f9;
+  min-height: 100vh;
+}
+
+.user-form, .order-form, .product-form {
+  background: white;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.user-form h3, .order-form h3, .product-form h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.user-form input, .user-form textarea,
+.order-form input, .order-form select, .order-form textarea,
+.product-form input, .product-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.user-form button, .order-form button, .product-form button {
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.user-form button:hover, .order-form button:hover, .product-form button:hover {
+  background: #45a049;
+}
+
+.user-form button:disabled, .order-form button:disabled, .product-form button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+.users-list, .orders-list, .products-list {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table th {
+  background: #f0f0f0;
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
+}
+
+table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+table tr:hover {
+  background: #f9f9f9;
+}
+
+table button {
+  padding: 6px 12px;
+  margin-right: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+table button:first-child {
+  background: #2196F3;
+  color: white;
+}
+
+table button:last-child {
+  background: #f44336;
+  color: white;
+}
+
+table select {
+  padding: 6px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}

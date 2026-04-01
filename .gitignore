@@ -1,0 +1,86 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# dependencies
+node_modules
+
+# environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# firebase
+serviceAccountKey.json
+
+# logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# build
+build
+dist
+# data and catalog files
+src/buyer/*Data.js
+src/buyer/normalized*
+src/buyer/masterCatalog.json
+
+# local data
+src/data/
+
+# optional product datasets
+src/buyer/doormatProducts.js
+src/buyer/curtainData.js
+src/buyer/pillowCover.js
+
+# firebase secrets
+.env
+# environment variables (firebase keys)
+.env
+.env.local
+
+# product datasets / private catalog
+src/data/
+src/buyer/masterCatalog.json
+src/buyer/*Data.js
+src/buyer/normalized*
+
+# product inventory files
+src/buyer/doormatProducts.js
+src/buyer/pillowCover.js
+src/buyer/curtainData.js
+
+# optional assets if private
+src/assets/private/
+
+# build and dependencies
+node_modules/
+dist/
+build/
+
+src/buyer/Bedsheet.js
+src/buyer/normalizedProducts.js

@@ -1,0 +1,49 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  environment = { NODE_VERSION = "18.x" }
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+  external_node_modules = ["cors", "express", "openai"]
+
+# API Routes - Redirect to Netlify Functions
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api"
+  status = 200
+
+# SPA Routing - Catch all unmatched routes and redirect to index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Security Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(self), microphone=()"
+
+# Cache Control for Static Assets
+[[headers]]
+  for = "/dist/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache Control for HTML
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Performance Hints
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Link = "</fonts/preload>; rel=preload; as=font, </css/preload>; rel=preload; as=style"
